@@ -40,13 +40,9 @@ public class Przedmiot {
         setImieProwadzacego(imieProwadzacego);
         setNazwiskoProwadzacego(nazwiskoProwadzacego);
     }
-    public String[] zmienProwadzacego(String imieNowegoProwadzacego, String nazwiskoNowegoProwadzacego){
+    public void zmienProwadzacego(String imieNowegoProwadzacego, String nazwiskoNowegoProwadzacego){
         setImieProwadzacego(imieNowegoProwadzacego);
         setNazwiskoProwadzacego(nazwiskoNowegoProwadzacego);
-        String[] prowadzacy = new String[2];
-        prowadzacy[0] = getImieProwadzacego();
-        prowadzacy[1] = getNazwiskoProwadzacego();
-        return prowadzacy;
 
     }
 }
