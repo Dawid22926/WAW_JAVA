@@ -1,11 +1,13 @@
-package com.choromanski;
+package com.klasy;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Student {
 String imie;
 String nazwisko;
-List<Float> oceny;
+ArrayList<Float> oceny;
 int indeks;
 
         public int getIndeks() {
@@ -32,22 +34,32 @@ int indeks;
                 this.nazwisko = nazwisko;
         }
 
-        public List<Float> getOceny() {
+        public ArrayList<Float> getOceny() {
                 return oceny;
         }
 
-        public void setOceny(List<Float> oceny) {
-                this.oceny = oceny;
-        }
 
         public Student(String imie, String nazwisko, int indeks){
                 setImie(imie);
                 setNazwisko(nazwisko);
                 setIndeks(indeks);
+                oceny = new ArrayList<>();
+                //this.oceny.clear();
         }
         public void pobierzDane(){
                 System.out.println("Imię: " + getImie());
                 System.out.println("Nazwisko: " + getNazwisko());
                 System.out.println("Indeks: " + getIndeks());
+                if (getOceny().isEmpty()){
+                        System.out.println("Oceny: brak");
+                }
+                else {
+                        System.out.println("Oceny: " + getOceny());
+                }
+
+        }
+        public List<Float> dodajOcene(Float ocena){
+                this.oceny.add(ocena);
+                return getOceny();
         }
 }
