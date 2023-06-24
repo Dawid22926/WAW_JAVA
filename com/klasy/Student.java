@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * klasa reprezentująca studenta
+ */
 public class Student {
 String imie;
 String nazwisko;
@@ -46,6 +49,10 @@ int indeks;
                 oceny = new ArrayList<>();
                 //this.oceny.clear();
         }
+
+        /**
+         * metoda pobierająca wyświetlająca dane o studencie
+         */
         public void pobierzDane(){
                 System.out.println("Imię: " + getImie());
                 System.out.println("Nazwisko: " + getNazwisko());
@@ -58,6 +65,10 @@ int indeks;
                 }
 
         }
+
+        /**
+         * metoda dodająca ocenę studentowi
+         */
         public List<Float> dodajOcene(Float ocena){
                 this.oceny.add(ocena);
                 return getOceny();

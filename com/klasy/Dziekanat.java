@@ -16,6 +16,10 @@ public class Dziekanat {
     public Dziekanat(int iloscPracownikow){
         setIloscPracownikow(iloscPracownikow);
     }
+
+    /**
+     * metoda usuwająca studenta z listy studentów
+     */
     public ArrayList<Integer> usunStudenta(int indeks, ArrayList<Integer> l){
         l.remove(Integer.valueOf(indeks));
         return l;

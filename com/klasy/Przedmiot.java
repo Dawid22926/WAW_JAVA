@@ -1,5 +1,8 @@
 package com.klasy;
 
+/**
+ * klasa reprezentująca przedmiot
+ */
 public class Przedmiot {
     String nazwa;
     String imieProwadzacego;
@@ -40,6 +43,10 @@ public class Przedmiot {
         setImieProwadzacego(imieProwadzacego);
         setNazwiskoProwadzacego(nazwiskoProwadzacego);
     }
+
+    /**
+     * metoda zmieniająca prowadzącego
+     */
     public void zmienProwadzacego(String imieNowegoProwadzacego, String nazwiskoNowegoProwadzacego){
         setImieProwadzacego(imieNowegoProwadzacego);
         setNazwiskoProwadzacego(nazwiskoNowegoProwadzacego);
