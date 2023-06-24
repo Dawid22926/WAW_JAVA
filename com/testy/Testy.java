@@ -7,7 +7,9 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-
+/**
+ * klasa testująca
+ */
 public class Testy {
     @Test
     public void testDodawaniaOceny(){
