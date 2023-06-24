@@ -1,7 +1,9 @@
 package com.glowny.program;
+import com.klasy.Dziekanat;
 import com.klasy.Przedmiot;
 import com.klasy.Student;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -14,12 +16,15 @@ public class Main {
         System.out.print("Wprowadź numer indeksu studenta: ");
         int indeks = scanner.nextInt();
         var S = new Student(imieStudenta, nazwiskoStudenta, indeks);
+        ArrayList<Integer> studenci = new ArrayList<>();
+        studenci.add(S.getIndeks());
         S.pobierzDane();
         System.out.print("Wprowadź ocenę, którą student otrzymał: ");
         Float ocena = scanner.nextFloat();
         S.dodajOcene(ocena);
         S.pobierzDane();
-        //----------------------------------
+
+
         System.out.print("Wprowadź imię prowadzącego: ");
         String imieProwadzacego = scanner.next();
         System.out.print("Wprowadź nazwisko prowadzącego: ");
@@ -34,6 +39,14 @@ public class Main {
         String nazwiskoNowegoProwadzacego = scanner.next();
         P.zmienProwadzacego(imieNowegoProwadzacego, nazwiskoNowegoProwadzacego);
         P.pobierzDanePrzedmiotu();
+
+
+        System.out.println("Wprowadź liczbę pracowników dziekanatu: ");
+        int liczbaPracownikow = scanner.nextInt();
+        var D = new Dziekanat(liczbaPracownikow);
+        System.out.print("Wprowadź indeks studenta, którego chcesz usunąć z listy studentów: ");
+        int indeksDoUsuniecia = scanner.nextInt();
+        System.out.println(D.usunStudenta(indeksDoUsuniecia, studenci));
 
     }
 }
